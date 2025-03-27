@@ -1,0 +1,489 @@
+/* Dark Theme Color Palette */
+:root {
+    /* Color Palette */
+    --primary-dark-blue: #0A2342;
+    --secondary-dark-blue: #1A3B5C;
+    --accent-blue: #2A5A8A;
+    --pure-black: #000000;
+    --pure-white: #FFFFFF;
+    --soft-white: #E6E6E6;
+    --highlight-blue: #4A90E2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-dark-blue);
+    color: var(--soft-white);
+    line-height: 1.6;
+}
+
+
+
+/* Navigation Styling */
+.navbar {
+    background-color: var(--secondary-dark);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    color: var(--light-blue) !important;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--light-blue);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: 
+        linear-gradient(135deg, rgba(10, 35, 66, 0.8), rgba(26, 59, 92, 0.8)), 
+        url('https://png.pngtree.com/thumb_back/fh260/background/20230527/pngtree-hair-salon-in-orange-and-black-paint-image_2691249.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(45deg, rgba(30,58,138,0.1), transparent),
+        linear-gradient(135deg, transparent, rgba(92,219,149,0.1));
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--light-blue);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--secondary-dark);
+    padding: 80px 0;
+}
+
+.service-card {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(30,58,138,0.3);
+}
+
+/* Enhanced Form Styling */
+.booking-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--secondary-dark);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.booking-header {
+    background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, 
+        transparent 70%);
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.booking-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.booking-form {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control {
+    background-color: var(--primary-dark);
+    border: 2px solid var(--accent-blue);
+    color: var(--white);
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--secondary-dark);
+    border-color: var(--light-blue);
+    box-shadow: 0 0 15px rgba(92,219,149,0.3);
+}
+
+.form-control::placeholder {
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+.form-label {
+    color: var(--light-blue);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+    border: none;
+    color: var(--white);
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(255,255,255,0.3), 
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(30,58,138,0.3);
+}
+
+.service-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.service-option {
+    background-color: var(--primary-dark);
+    border: 2px solid var(--accent-blue);
+    color: var(--text-light);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-option.selected {
+    background-color: var(--light-blue);
+    color: var(--primary-dark);
+    border-color: var(--light-blue);
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        margin: 20px 10px;
+    }
+    
+    .booking-form {
+        padding: 20px;
+    }
+}
+
+/* New Testimonials Section */
+.testimonials-section {
+    background-color: var(--secondary-dark);
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--light-blue);
+    opacity: 0.5;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-dark);
+    color: var(--white);
+    padding: 30px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.floating-element {
+    animation: float 4s ease-in-out infinite;
+}
+.creative-footer {
+        background-color: #0A192F;
+        color: #CBD5E1;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .footer-logo h3 {
+        font-family: 'Playfair Display', serif;
+        color: #5CDB95;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    .footer-section h4 {
+        color: #5CDB95;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+        color: #CBD5E1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: #5CDB95;
+    }
+
+    .footer-contact p {
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .social-icons a {
+        color: #CBD5E1;
+        font-size: 1.5rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #5CDB95;
+        transform: scale(1.2);
+    }
+
+    .footer-bottom {
+        background-color: #112240;
+        color: #CBD5E1;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 30px;
+    }
+
+    .footer-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            linear-gradient(45deg, rgba(30,58,138,0.1), transparent),
+            linear-gradient(135deg, transparent, rgba(92,219,149,0.1));
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-logo {
+            justify-content: center;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+
+    .photo-gallery-section {
+        background-color: #1a1a2e;
+        padding: 5rem 0;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+        opacity: 0.8;
+    }
+    
+    @media (max-width: 992px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+    }
